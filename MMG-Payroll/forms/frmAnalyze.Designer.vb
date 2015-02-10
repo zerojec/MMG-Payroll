@@ -49,7 +49,7 @@ Partial Class frmAnalyze
         Me.lv.Margin = New System.Windows.Forms.Padding(4)
         Me.lv.MultiSelect = False
         Me.lv.Name = "lv"
-        Me.lv.Size = New System.Drawing.Size(567, 448)
+        Me.lv.Size = New System.Drawing.Size(250, 0)
         Me.lv.TabIndex = 0
         Me.lv.UseCompatibleStateImageBehavior = False
         Me.lv.View = System.Windows.Forms.View.Details
@@ -79,13 +79,13 @@ Partial Class frmAnalyze
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnAnalyze, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnOpenFile, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.pb, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.pb, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1117, 39)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 39)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'btnAnalyze
@@ -119,7 +119,7 @@ Partial Class frmAnalyze
         Me.lb.ItemHeight = 16
         Me.lb.Location = New System.Drawing.Point(9, 7)
         Me.lb.Name = "lb"
-        Me.lb.Size = New System.Drawing.Size(515, 452)
+        Me.lb.Size = New System.Drawing.Size(515, 4)
         Me.lb.TabIndex = 2
         '
         'pnlops
@@ -131,7 +131,7 @@ Partial Class frmAnalyze
         Me.pnlops.Controls.Add(Me.lv)
         Me.pnlops.Location = New System.Drawing.Point(3, 45)
         Me.pnlops.Name = "pnlops"
-        Me.pnlops.Size = New System.Drawing.Size(1102, 459)
+        Me.pnlops.Size = New System.Drawing.Size(785, 0)
         Me.pnlops.TabIndex = 3
         '
         'bgAnalyzer
@@ -140,27 +140,27 @@ Partial Class frmAnalyze
         '
         'pb
         '
-        Me.TableLayoutPanel1.SetColumnSpan(Me.pb, 2)
-        Me.pb.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.SetColumnSpan(Me.pb, 3)
         Me.pb.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pb.Location = New System.Drawing.Point(424, 4)
+        Me.pb.Location = New System.Drawing.Point(284, 4)
         Me.pb.Margin = New System.Windows.Forms.Padding(4)
         Me.pb.max = 0
         Me.pb.Name = "pb"
-        Me.pb.Size = New System.Drawing.Size(689, 31)
+        Me.pb.Size = New System.Drawing.Size(512, 31)
         Me.pb.TabIndex = 2
         '
-        'Form1
+        'frmAnalyze
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1117, 516)
+        Me.ClientSize = New System.Drawing.Size(800, 44)
         Me.Controls.Add(Me.pnlops)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Form1"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Name = "frmAnalyze"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.pnlops.ResumeLayout(False)
         Me.ResumeLayout(False)

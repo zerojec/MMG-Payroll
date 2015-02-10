@@ -142,4 +142,12 @@
     Private Sub bgAnalyzer_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles bgAnalyzer.ProgressChanged
         pb.setProgress(CDec(e.ProgressPercentage))
     End Sub
+
+    Private Sub bgAnalyzer_RunWorkerCompleted(ByVal sender As Object, ByVal e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles bgAnalyzer.RunWorkerCompleted
+
+        Dim frm As New frmMain
+        frm.Show()
+        Me.Hide()
+
+    End Sub
 End Class

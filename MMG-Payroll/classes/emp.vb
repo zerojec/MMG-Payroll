@@ -34,4 +34,24 @@ Public Class emp
         End If
     End Function
 
+    Public Function GET_ATTENDANCE_BETWEEN_DATE(ByVal d1 As Date, ByVal d2 As Date) As DataTable
+        Dim dt As New DataTable
+        Dim cmd As New MySqlCommand
+        SET_COMMAND_PROPERTIES(cmd, "ATTENDANCE_BETWEEN_DATE")
+        cmd.Parameters.AddWithValue("_from_date", d1)
+        cmd.Parameters.AddWithValue("_to_date", d2)
+
+
+        dt = LOAD_DATATABLE_FROM_STOREDPRO(cmd)
+
+        If dt IsNot Nothing Then
+            If dt.Rows.Count > 0 Then
+                GET_ATTENDANCE_BETWEEN_DATE = dt
+            Else
+                GET_ATTENDANCE_BETWEEN_DATE = Nothing
+            End If
+        End If
+
+    End Function
+
 End Class
