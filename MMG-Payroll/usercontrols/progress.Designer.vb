@@ -23,9 +23,9 @@ Partial Class progress
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
+        Me.lblpercent = New System.Windows.Forms.Label
         Me.pb = New System.Windows.Forms.ProgressBar
         Me.lblcount = New System.Windows.Forms.Label
-        Me.lblpercent = New System.Windows.Forms.Label
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,12 +40,23 @@ Partial Class progress
         Me.TableLayoutPanel1.Controls.Add(Me.lblcount, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(399, 30)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'lblpercent
+        '
+        Me.lblpercent.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblpercent.AutoSize = True
+        Me.lblpercent.Location = New System.Drawing.Point(302, 7)
+        Me.lblpercent.Name = "lblpercent"
+        Me.lblpercent.Size = New System.Drawing.Size(94, 16)
+        Me.lblpercent.TabIndex = 2
+        Me.lblpercent.Text = "0.00%"
+        Me.lblpercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pb
         '
@@ -66,24 +77,13 @@ Partial Class progress
         Me.lblcount.Text = ".../..."
         Me.lblcount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblpercent
-        '
-        Me.lblpercent.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblpercent.AutoSize = True
-        Me.lblpercent.Location = New System.Drawing.Point(302, 7)
-        Me.lblpercent.Name = "lblpercent"
-        Me.lblpercent.Size = New System.Drawing.Size(94, 16)
-        Me.lblpercent.TabIndex = 2
-        Me.lblpercent.Text = "0.00%"
-        Me.lblpercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'progress
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "progress"
         Me.Size = New System.Drawing.Size(399, 30)
         Me.TableLayoutPanel1.ResumeLayout(False)

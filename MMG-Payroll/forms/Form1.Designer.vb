@@ -31,8 +31,8 @@ Partial Class Form1
         Me.btnOpenFile = New System.Windows.Forms.Button
         Me.lb = New System.Windows.Forms.ListBox
         Me.pnlops = New System.Windows.Forms.Panel
-        Me.pb = New MMG_Payroll.progress
         Me.bgAnalyzer = New System.ComponentModel.BackgroundWorker
+        Me.pb = New MMG_Payroll.progress
         Me.TableLayoutPanel1.SuspendLayout()
         Me.pnlops.SuspendLayout()
         Me.SuspendLayout()
@@ -134,6 +134,10 @@ Partial Class Form1
         Me.pnlops.Size = New System.Drawing.Size(1102, 459)
         Me.pnlops.TabIndex = 3
         '
+        'bgAnalyzer
+        '
+        Me.bgAnalyzer.WorkerReportsProgress = True
+        '
         'pb
         '
         Me.TableLayoutPanel1.SetColumnSpan(Me.pb, 2)
@@ -145,9 +149,6 @@ Partial Class Form1
         Me.pb.Name = "pb"
         Me.pb.Size = New System.Drawing.Size(689, 31)
         Me.pb.TabIndex = 2
-        '
-        'bgAnalyzer
-        '
         '
         'Form1
         '

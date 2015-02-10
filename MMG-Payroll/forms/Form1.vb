@@ -6,6 +6,7 @@
         lb.Items.Clear()
         lv.Items.Clear()
 
+
         bgAnalyzer.RunWorkerAsync()
     End Sub
 
@@ -125,15 +126,20 @@
                 'lv.Items.Add(li)
             End If
             ctr += 1
-            pb.setProgress(ctr)
-            Dim n As Decimal = ctr
 
             SetLabelText_ThreadSafe(Me.pb.lblcount, ctr & "/" & total_ctr)
             SetLabelText_ThreadSafe(Me.pb.lblpercent, Format(ctr / total_ctr, "0.00%"))
+
+            Dim p As Integer = CInt(ctr)
+            bgAnalyzer.ReportProgress(p)
 
             System.Threading.Thread.Sleep(10)
         Loop
         objReader.Close()
 
+    End Sub
+
+    Private Sub bgAnalyzer_ProgressChanged(ByVal sender As Object, ByVal e As System.ComponentModel.ProgressChangedEventArgs) Handles bgAnalyzer.ProgressChanged
+        pb.setProgress(CDec(e.ProgressPercentage))
     End Sub
 End Class

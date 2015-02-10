@@ -21,4 +21,8 @@ Public Class progress
         pb.Maximum = max
     End Sub
 
+   
+    Private Sub pb_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pb.Click
+
+    End Sub
 End Class
