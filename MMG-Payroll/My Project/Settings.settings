@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="CONSTR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">server=localhost;User Id=root;Password=root;Persist Security Info=True;database=mmgpayrolldb</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
